@@ -1,0 +1,29 @@
+<?php
+
+namespace Sluggable;
+
+use Illuminate\Support\ServiceProvider;
+
+class SluggableServiceProvider extends ServiceProvider
+{
+    /**
+     * Bootstrap the application services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        //
+    }
+
+    /**
+     * Register the application services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        $this->app->make('Sluggable\Slug');
+
+    }
+}
